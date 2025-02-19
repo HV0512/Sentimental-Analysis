@@ -20,35 +20,49 @@ How It Works
 1. Data Loading:
    
 • The dataset is loaded using pandas.read_csv, which reads the Restaurant Reviews.tsv file.
+
 • The first few rows of the dataset are previewed to ensure correct data structure.
 
 2. Text Preprocessing:
    
 • Cleaning: Non-alphabetical characters are removed using regular expressions.
+
 • Normalization: The text is converted to lowercase to ensure uniformity.
+
 • Tokenization: Reviews are split into individual words.
+
 • Stopword Removal: Common stopwords (e.g., "the", "and", "is") are removed using NLTK’s stopword list.
+
 • Stemming: Words are reduced to their root form using PorterStemmer.
 
 3. Feature Extraction:
    
 • The text data is transformed into numerical feature vectors using CountVectorizer, which counts word occurrences.
+
 • Only the top 800 most frequent words are used as features to reduce dimensionality.
 
 4. Model Training:
    
 • The dataset is split into training and testing sets (80% training, 20% testing).
-• The following classifiers are trained:
+
+⦿ The following classifiers are trained:
+
 • Gaussian Naive Bayes (GNB): Assumes that features follow a Gaussian distribution.
+
 • Multinomial Naive Bayes (MNB): Suitable for text classification tasks where features are word counts.
+
 • Bernoulli Naive Bayes (BNB): Works well with binary/boolean features.
+
 • Random Forest Classifier: An ensemble method that builds multiple decision trees to improve accuracy.
+
 • XGBoost Classifier: A high-performance gradient boosting algorithm that typically outperforms other models in classification tasks.
 
 5. Model Evaluation:
    
 • The performance of each model is evaluated using accuracy scores.
+
 • The best-performing model is identified based on accuracy.
+
 • The confusion matrix of the best model is displayed to evaluate its classification performance in more detail.
 
 Results
