@@ -45,7 +45,7 @@ How It Works
    
 • The dataset is split into training and testing sets (80% training, 20% testing).
 
-⦿ The following classifiers are trained:
+The following classifiers are trained:
 
 • Gaussian Naive Bayes (GNB): Assumes that features follow a Gaussian distribution.
 
